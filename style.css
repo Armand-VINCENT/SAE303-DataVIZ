@@ -313,14 +313,14 @@ body {
 
 @font-face {
   font-family: 'Miso';
-  src: url('../fonts/miso-regular.otf');
+  src: url('./fonts/miso-regular.otf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Nexus';
-  src: url('../fonts/nexusbold-regular.otf');
+  src: url('./fonts/nexusbold-regular.otf');
   font-weight: normal;
   font-style: normal;
 
