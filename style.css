@@ -585,3 +585,23 @@ color: #8E2A34;
 .parc-info{
   font-size: 2.5rem;
 }
+
+.cirque-text{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+left: 25rem;
+top: 24rem;
+width: 20rem;
+gap: 2rem;
+color: #6D4D37;
+}
+
+.cirque-info{
+  font-size: 2.5rem;
+}
+
+.cirque-number{
+  font-size: 18rem;
+
+}
