@@ -499,3 +499,16 @@ body {
   top: 2rem;
 
 }
+
+
+
+.bobanimation{
+  transition: .3s ease-in-out;
+
+}
+
+.fallingbob{
+   
+
+  transform: translate(35vw,0rem);
+}

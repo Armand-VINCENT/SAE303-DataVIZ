@@ -188,25 +188,46 @@ function translateBobOnScroll() {
   let lastChangeTime = 0;
   let scrollTimeout;
   let lastScrollTop = 0;
+  // let isFalling = gsap.to("#bob", {
+  //   scrollTrigger: {
+  //     trigger: ".final",
+  //     containerAnimation: scrollTween,
+  //     scrub: true,
+  //     start: "center 80%",
+  //     end: "center 58%",
+  //     markers: { startColor: "white", endColor: "white" },
+  //   },
+  // });
+
+  
+ window.fallingImg = false;
 
   window.addEventListener("scroll", () => {
     let currentTime = Date.now();
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
+    let bobImage = bob.querySelector("img");
+    console.log(window.isFalling);
     if (currentTime - lastChangeTime > 200) {
       if (scrollTop > lastScrollTop) {
-        // Scrolling down
-        if (isWalking) {
-          bob.innerHTML = '<img src="Assets/BOB_char_walking.svg" style="position: relative;" alt="">';
+         if (isWalking) {
+          bobImage.src = "Assets/BOB_char_walking.svg";
+          bobImage.className = "bobanimation";
+          bobImage.style.transform = "scaleX(1)";
         } else {
-          bob.innerHTML = '<img src="Assets/BOB_char.svg" style="position: relative;" alt="">';
+          bobImage.src = "Assets/BOB_char.svg";
+          bobImage.className = "bobanimation";
+          bobImage.style.transform = "scaleX(1)";
         }
       } else {
         // Scrolling up
         if (isWalking) {
-          bob.innerHTML = '<img src="Assets/BOB_char_walking.svg" style="position: relative; transform: scaleX(-1);" alt="">';
+          bobImage.src = "Assets/BOB_char_walking.svg";
+          bobImage.className = "bobanimation";
+          bobImage.style.transform = "scaleX(-1)";
         } else {
-          bob.innerHTML = '<img src="Assets/BOB_char.svg" style="position: relative; transform: scaleX(-1);" alt="">';
+          bobImage.src = "Assets/BOB_char.svg";
+          bobImage.className = "bobanimation";
+          bobImage.style.transform = "scaleX(-1)";
         }
       }
       isWalking = !isWalking;

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="bob" id="bob">
+    <div class="bob bobanimation" id="bob">
       <img
         src="Assets/BOB_char_walking.svg"
         style="position: relative"
@@ -227,9 +227,25 @@
      
 
     </div>
-
+    <div id="vertical">
     <div class="final panel--covid1">
       
+      <script>
+        window.isFalling = false;
+
+        const verticalSection = document.getElementById('vertical');
+
+        window.addEventListener('scroll', () => {
+          const rect = verticalSection.getBoundingClientRect();
+          if (rect.top < (window.innerHeight || document.documentElement.clientHeight) && rect.bottom > 0) {
+            window.isFalling = true;
+          } else {
+            window.isFalling = false;
+          }
+        });
+      </script>
+
+
     </div>
     <div class="final panel--covid2">
    
@@ -237,7 +253,7 @@
     <div class="final panel--covid3">
       
     </div>
-
+  </div>
     <div class="container2">
 
 
