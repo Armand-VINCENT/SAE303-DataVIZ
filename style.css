@@ -566,3 +566,22 @@ color: #8E2A34;
 
 
 }
+
+
+.parc-text{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 2rem;
+  left: 10rem;
+  color: white;
+  gap: 3 rem;
+}
+
+.parc-number{
+  font-size: 13rem;
+  font-weight: bolder;
+}
+.parc-info{
+  font-size: 2.5rem;
+}
