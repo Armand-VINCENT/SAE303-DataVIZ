@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bob" id="bob">
+      <img
+        src="Assets/BOB_char_walking.svg"
+        style="position: relative"
+        alt=""
+      />
+    </div>
+    <div class="container">
+     
+      <section class="panel panel--intro">
+
+        <img class="intro__cloud" src="Assets/IntroCloud.svg" alt="">
+
+        <div class="intro__text">
+        
+        <p class="animation fontbase">Salut, moi c’est Bob !</p>
+        <p class="animation fontbase">Découvre l’histoire de la culture</p>
+        <p class="animation fontbase">en scrollant avec moi.</p>
+
+      </div>
+      </section>
+
+
+
+      <section class="panel panel--musee1 panel--test">
+        <div class="data_first--musee">
+        
+        <p id="counter" class="counter fontnumber data_first--number">0 </p>
+        <p class="data_first--info fontbase anim1">Musées ouvert en France</p>
+      </div>
+       
+        <canvas id="canvas" width="193" height="271" class="joconde" ></canvas>
+            <script type="module">
+                import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+                new DotLottie({
+                    autoplay: true,
+                    loop: true,
+                    canvas: document.getElementById("canvas"),
+                    src: "./Assets/Joconde.lottie", // or .json file
+                });
+            </script>
+      </section>
+      <section class="panel panel--musee2">
+
+      
+      </section>
+      <section class="panel panel--musee3">
+      
+        <p class="data_2--number fontnumber anim2">67%</p>
+        <p class="data_2--info fontbase ">De fréquentation en 2019</p>
+      
+      </section>
+      <section class="panel panel--cinema1">
+       
+        <p class="fontbase cinema--sign">Cinema</p>
+
+        <canvas id="lottiecinema" width="1980" height="1080" class="cinemanim" ></canvas>
+            <script type="module">
+                import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+                new DotLottie({
+                    autoplay: true,
+                    loop: true,
+                    canvas: document.getElementById("lottiecinema"),
+                    src: "./Assets/statcinema1.lottie", // or .json file
+                });
+            </script>
+
+      </section>
+      <section class="panel panel--cinema2">
+        
+      </section>
+
+
+      <section class="panel panel--biblio1">
+       
+        <div class="data_first--biblio">
+        
+          <p id="counter2" class="counter2 fontnumber biblio_first--number">0 </p>
+          <div class="biblio_info--container">
+          <p class="biblio_first--info fontbase ">Bibliothèques municipales</p>
+          <p class="biblio_first--info fontbase ">publiques en France</p>
+
+          </div>
+        
+          
+        </div>
+
+  
+
+      </section>
+
+      <section class="panel panel--biblio2">
+        
+
+        <canvas id="firstLottieBiblio" class="firstLottieBiblio" width="290" height="271"></canvas>
+        <script type="module">
+            import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+  
+            const lottieBiblio1 = new DotLottie({
+          autoplay: false,
+          loop: false,
+          canvas: document.getElementById("firstLottieBiblio"),
+          src: "./Assets/biblio1.lottie", // or .json file
+          duration: 1,
+            });
+  
+            let hasPlayed = false;
+  
+            window.addEventListener('scroll', () => {
+          if (!hasPlayed) {
+              const canvas = document.getElementById("firstLottieBiblio");
+              const rect = canvas.getBoundingClientRect();
+              if (rect.left >= 0 && rect.right <= (window.innerWidth || document.documentElement.clientWidth)) {
+            lottieBiblio1.play();
+            hasPlayed = true;
+              }
+          }
+            });
+        </script>
+
+
+        
+<canvas id="secondLottieBiblio" class="secondLottieBiblio" width="580" height="542"></canvas>
+<script type="module">
+    import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+    const lottieBiblio2 = new DotLottie({
+  autoplay: false,
+  loop: false,
+  canvas: document.getElementById("secondLottieBiblio"),
+  src: "./Assets/biblio2.lottie", // or .json file
+  duration: 1,
+    });
+
+    let hasPlayed2 = false;
+
+    window.addEventListener('scroll', () => {
+  if (!hasPlayed2) {
+      const canvas = document.getElementById("secondLottieBiblio");
+      const rect = canvas.getBoundingClientRect();
+      if (rect.left >= 0 && rect.right <= (window.innerWidth || document.documentElement.clientWidth)) {
+    lottieBiblio2.play();
+    hasPlayed2 = true;
+      }
+  }
+    });
+</script>
+      </section>
+
+      <section class="panel panel--biblio3">
+      
+        <canvas id="thirdLottieBiblio" class="thirdLottieBiblio" width="580" height="542"></canvas>
+        <script type="module">
+            import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+  
+            const lottieBiblio3 = new DotLottie({
+          autoplay: false,
+          loop: false,
+          canvas: document.getElementById("thirdLottieBiblio"),
+          src: "./Assets/biblio3.lottie", // or .json file
+          duration: 1,
+            });
+  
+            let hasPlayed3 = false;
+  
+            window.addEventListener('scroll', () => {
+          if (!hasPlayed3) {
+              const canvas = document.getElementById("thirdLottieBiblio");
+              const rect = canvas.getBoundingClientRect();
+              if (rect.left >= 0 && rect.right <= (window.innerWidth || document.documentElement.clientWidth)) {
+            lottieBiblio3.play();
+            hasPlayed3 = true;
+              }
+          }
+            });
+        </script>
+
+
+<canvas id="fourthLottieBiblio" class="fourthLottieBiblio" width="580" height="542"></canvas>
+<script type="module">
+    import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+    const lottieBiblio4 = new DotLottie({
+  autoplay: false,
+  loop: false,
+  canvas: document.getElementById("fourthLottieBiblio"),
+  src: "./Assets/biblio4.lottie", // or .json file
+  duration: 1,
+    });
+
+    let hasPlayed4 = false;
+
+    window.addEventListener('scroll', () => {
+  if (!hasPlayed4) {
+      const canvas = document.getElementById("fourthLottieBiblio");
+      const rect = canvas.getBoundingClientRect();
+      if (rect.left >= 0 && rect.right <= (window.innerWidth || document.documentElement.clientWidth)) {
+    lottieBiblio4.play();
+    hasPlayed4 = true;
+      }
+  }
+    });
+
+
+    
+</script>
+
+
+  <img  id="biblio_graph" class="biblio_graph" src="Assets/BiblioGraph.svg" alt="">
+
+      </section>
+
+      <section class="panel panel--ecole">
+        
+      </section>
+     
+
+    </div>
+
+    <div class="final panel--covid1">
+      
+    </div>
+    <div class="final panel--covid2">
+   
+    </div>
+    <div class="final panel--covid3">
+      
+    </div>
+
+    <div class="container2">
+
+
+      <section class="panel2 panel--chambre1">
+
+      </section>
+
+      <section class="panel2 panel--museeafter"></section>
+
+        <section class="panel2 panel--cinemaafter"></section>
+
+        <section class="panel2 panel--parc"></section>
+
+        <section class="panel2 panel--cirque"></section>
+
+        <section class="panel2 panel--biblioafter"></section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
