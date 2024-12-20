@@ -216,13 +216,13 @@ body {
 }
 
 .panel--covid1{
-  background: url("Assets/ChuteCovid1.svg");
+  background: url("Assets/ChuteCovidV3-1.svg");
 }
 .panel--covid2{
-  background: url("Assets/ChuteCovid2.svg");
+  background: url("Assets/ChuteCovidV3-2.svg");
 }
 .panel--covid3{
-  background: url("Assets/ChuteCovid3.svg");
+  background: url("Assets/ChuteCovidV2-3.svg");
 }
 
 .panel--chambre1{
@@ -617,4 +617,11 @@ color: #6D4D37;
   position: absolute;
   left: 15rem;
   top: 35rem;
+}
+
+.lottietv{
+  display: flex;
+  position: absolute;
+  top: 5rem;
+  
 }

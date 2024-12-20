@@ -271,6 +271,18 @@
 
       <section class="panel2 panel--chambre1">
 
+        <canvas id="lottietv" width="742.5" height="405" class="lottietv" ></canvas>
+            <script type="module">
+                import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+                new DotLottie({
+                    autoplay: true,
+                    loop: true,
+                    canvas: document.getElementById("lottietv"),
+                    src: "./Assets/tvstat.lottie", // or .json file
+                });
+            </script>
+
       </section>
 
       <section class="panel2 panel--museeafter">
