@@ -244,3 +244,91 @@ function translateBobOnScroll() {
 }
 
 translateBobOnScroll();
+
+
+
+gsap.fromTo(
+  ".museeafter__text-container",
+  { 
+    opacity: 0, 
+    y: 50 // Légère translation vers le bas
+  },
+  { 
+    opacity: 1, 
+    y: 0, // Position finale
+    ease: "power2.out", // Transition fluide
+    duration: 1.2, // Durée raisonnable pour une apparence naturelle
+    scrollTrigger: {
+      trigger: ".museeafter__text-container",
+      containerAnimation: scrollTween2,
+      start: "0% 100%",
+      end: "center 58%",
+      toggleActions: "play none none reset",
+      // markers: { startColor: "white", endColor: "white" },
+    },
+  }
+);
+
+
+gsap.fromTo(
+  ".parc-text",
+  { 
+    opacity: 0, 
+    y: -50 // Légère translation vers le bas
+  },
+  { 
+    opacity: 1, 
+    y: 0, // Position finale
+    ease: "power2.out", // Transition fluide
+    duration: 2, // Durée raisonnable pour une apparence naturelle
+    scrollTrigger: {
+      trigger: ".parc-text",
+      containerAnimation: scrollTween2,
+      start: "0% 100%",
+      end: "center 58%",
+      toggleActions: "play none none reset",
+      // markers: { startColor: "white", endColor: "white" },
+    },
+  }
+);
+
+gsap.fromTo(
+  ".cirque-text",
+  { 
+    opacity: 0, 
+    x: 75 // Légère translation vers le bas
+  },
+  { 
+    opacity: 1, 
+    x: 0, // Position finale
+    ease: "power2.out", // Transition fluide
+    duration: 2, // Durée raisonnable pour une apparence naturelle
+    scrollTrigger: {
+      trigger: ".cirque-text",
+      containerAnimation: scrollTween2,
+      start: "0% 100%",
+      end: "center 58%",
+      toggleActions: "play none none reset",
+      // markers: { startColor: "white", endColor: "white" },
+    },
+  }
+);
+
+
+gsap.to("#lastcounter", {
+  duration: 2.5, // Duration of the animation in seconds
+  innerText: 81909,
+  snap: { innerText: 1 }, // Snap to whole numbers
+  ease: "power1.inOut",
+  scrollTrigger: {
+    trigger: ".biblioafter-number",
+    containerAnimation: scrollTween2,
+    start: "0% 100%",
+    end: "center 58%",
+    toggleActions: "play none none reset",
+    // markers: { startColor: "white", endColor: "white" },
+  },
+  onUpdate: function () {
+    document.getElementById("lastcounter").innerText = Math.floor(this.targets()[0].innerText);
+  }
+});

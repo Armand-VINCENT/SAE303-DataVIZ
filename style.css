@@ -521,9 +521,7 @@ body {
   font-size: 1.9rem;
   line-height: 0.8;
 }
-.museeafter__text-container{
-color:#66CCFF ;
-}
+
 
 .museeafter__text-container{
   display: flex;
@@ -534,6 +532,7 @@ color:#66CCFF ;
   left: 22rem;
   top: 12rem;
   gap: 2rem;
+  color:#66CCFF ;
 }
 
 .ecoleanime{
@@ -603,4 +602,12 @@ color: #6D4D37;
 .cirque-number{
   font-size: 18rem;
 
+}
+
+.biblioafter-number{
+  font-size: 20rem;
+  color: #867EA8;
+  position: absolute;
+  left: 15rem;
+  top: 35rem;
 }
