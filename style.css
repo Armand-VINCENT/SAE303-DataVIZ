@@ -343,7 +343,7 @@ body {
 }
 
 .biblio_first--number{
-  font-size: 15em;
+  font-size: 20rem;
   line-height: 0.8;
 }
 
@@ -364,8 +364,8 @@ body {
     display: flex;
   flex-direction: row;
   position: absolute;
-  top: 25rem;
-  left: 37rem;
+  top: 10rem;
+  left: 40rem;
   color: #524E6D;
   justify-content: center;
   align-items: center;
