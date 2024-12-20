@@ -233,7 +233,7 @@ body {
   background: url("Assets/Museeafter3.svg");
 }
 .panel--cinemaafter{
-  background: url("Assets/CinemaAfter.svg");
+  background: url("Assets/CinemaAfter2.svg");
 }
 .panel--parc{
   background: url("Assets/Parc.svg");
@@ -511,4 +511,58 @@ body {
    
 
   transform: translate(35vw,0rem);
+}
+
+.musee2_first--number{
+  font-size: 25em;
+  line-height: 0.8;
+}
+
+.musee2_first--info{
+  font-size: 1.9rem;
+  line-height: 0.8;
+}
+.museeafter__text-container{
+color:#66CCFF ;
+}
+
+.museeafter__text-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: 22rem;
+  top: 12rem;
+  gap: 2rem;
+}
+
+.ecoleanime{
+display: flex;
+position: absolute;
+top: 5rem;
+}
+
+
+.musee2_second--number {
+  font-size: 20em;
+  line-height: 0.8;
+  position: absolute;
+  top: 4rem;
+right: 30rem;
+}
+.musee2_second--info {
+  font-size: 3rem;
+  line-height: 0.8;
+  position: absolute;
+  top: 21rem;
+  right: 10rem;
+}
+.museeafter2__text-container{
+  display: flex;
+  flex-direction: column  ;
+  gap: 2rem;
+color: #8E2A34;
+
+
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SAE303-DataVIZ</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -223,6 +223,18 @@
 
       <section class="panel panel--ecole">
         
+        <canvas id="lottieecole" width="990" height="540" class="ecoleanime" ></canvas>
+            <script type="module">
+                import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+                new DotLottie({
+                    autoplay: true,
+                    loop: true,
+                    canvas: document.getElementById("lottieecole"),
+                    src: "./Assets/tablostat1.lottie", // or .json file
+                });
+            </script>
+
       </section>
      
 
@@ -261,7 +273,22 @@
 
       </section>
 
-      <section class="panel2 panel--museeafter"></section>
+      <section class="panel2 panel--museeafter">
+
+        <div class="museeafter__text-container">
+          <p class="musee2_first--number fontnumber">28,5 M</p>
+          <div class="infomusee__container">
+          <p class="musee2_first--info fontbase">De fréquentation post-covid dans les musées.</p>
+          <p class="musee2_first--info fontbase"> Soit une augmentation de <span>16,17%</span></p>
+          </div>
+        </div>
+
+        <div class="museeafter2__text-container">
+          <p class="musee2_second--number fontnumber">75,40%</p>
+          <p class="musee2_second--info fontbase">des musées ont réouvert post-covid</p>
+        </div>
+
+      </section>
 
         <section class="panel2 panel--cinemaafter"></section>
 
