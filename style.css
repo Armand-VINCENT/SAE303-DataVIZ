@@ -319,11 +319,10 @@ body {
 }
 
 @font-face {
-  font-family: 'Nexus';
+  font-family: 'Nexusbold';
   src: url('./fonts/nexusbold-regular.otf');
   font-weight: normal;
   font-style: normal;
-
 }
 
 .fontbase{
@@ -332,7 +331,7 @@ body {
 }
 
 .fontnumber{
-  font-family: 'Nexus';
+  font-family: 'Nexusbold';
   line-height: 0.8;
 }
 
