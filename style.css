@@ -499,7 +499,14 @@ body {
 
 }
 
+/* classes fonctionnelles */
+.bobX1 {
+  transform: scaleX(1);
+}
 
+.bobX-1 {
+  transform: scaleX(-1);
+}
 
 .bobanimation{
   transition: .3s ease-in-out;
@@ -507,10 +514,10 @@ body {
 }
 
 .fallingbob{
-   
-
   transform: translate(35vw,0rem);
 }
+
+
 
 .musee2_first--number{
   font-size: 25em;

@@ -26,7 +26,7 @@ let scrollTween2 = gsap.to(sections2, {
     pin: true, // Vérifiez si ce "pin" est nécessaire
     scrub: 0.1,
     start: "top top",
-    end: () => "+=" + document.querySelector(".container").scrollWidth, // Ajustez la valeur pour limiter l'effet
+    end: () => "+=" + document.querySelector(".container2").scrollWidth, // Ajustez la valeur pour limiter l'effet
   },
 });
 // section 1 : Simple Animation
@@ -207,39 +207,46 @@ function translateBobOnScroll() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let bobImage = bob.querySelector("img");
     console.log(window.isFalling);
-    if (currentTime - lastChangeTime > 200) {
+    if (currentTime - lastChangeTime > 100) {
+
       if (scrollTop > lastScrollTop) {
-         if (isWalking) {
+        if (window.isFalling) {
+          bobImage.src = "Assets/BOB_char_falling.svg";
+          bobImage.className = "bobanimation bobX1 fallingbob";
+        } else if (isWalking) {
           bobImage.src = "Assets/BOB_char_walking.svg";
-          bobImage.className = "bobanimation";
-          bobImage.style.transform = "scaleX(1)";
+          bobImage.className = "bobanimation bobX1";
         } else {
           bobImage.src = "Assets/BOB_char.svg";
-          bobImage.className = "bobanimation";
-          bobImage.style.transform = "scaleX(1)";
+          bobImage.className = "bobanimation bobX1";
         }
       } else {
         // Scrolling up
-        if (isWalking) {
+        
+        if (window.isFalling) {
+          bobImage.src = "Assets/BOB_char_falling.svg";
+          bobImage.className = "bobanimation bobX-1 fallingbob";
+        } else if (isWalking) {
           bobImage.src = "Assets/BOB_char_walking.svg";
-          bobImage.className = "bobanimation";
-          bobImage.style.transform = "scaleX(-1)";
+          bobImage.className = "bobanimation bobX-1";
         } else {
           bobImage.src = "Assets/BOB_char.svg";
-          bobImage.className = "bobanimation";
-          bobImage.style.transform = "scaleX(-1)";
+          bobImage.className = "bobanimation bobX-1";
         }
       }
       isWalking = !isWalking;
       lastChangeTime = currentTime;
     }
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling  
     clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      bob.innerHTML = '<img src="Assets/BOB_char_walking.svg" style="position: relative;" alt="">';
-    }, 500); // 500ms after the user stops scrolling
+    if (window.isFalling == false) {
+      scrollTimeout = setTimeout(() => {
+          bobImage.src = "Assets/BOB_char_walking.svg";
+          bobImage.className = "bobanimation bobX1";
+      }, 500); // 500ms after the user stops scrolling
+    }
+    
   });
 }
 
