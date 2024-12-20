@@ -40,7 +40,7 @@ let scrollTween2 = gsap.to(sections2, {
 //     start: "center 80%",
 //     end: "center 58%",
 //     toggleActions: "play none none reset",
-//     markers: { startColor: "white", endColor: "white" },
+//     
 //   },
 // });
 
@@ -55,7 +55,7 @@ let scrollTween2 = gsap.to(sections2, {
 //     scrub: true,
 //     start: "center 80%",
 //     end: "center 58%",
-//     markers: { startColor: "white", endColor: "white" },
+//     
 //   },
 // });
 
@@ -66,7 +66,7 @@ let scrollTween2 = gsap.to(sections2, {
 //   toggleClass: "active",
 //   start: "center 80%",
 //   end: "center 58%",
-//   markers: { startColor: "white", endColor: "white" },
+//   
 // });
 
 
@@ -76,7 +76,7 @@ ScrollTrigger.create({
   toggleClass: "animetext",
   start: "center 80%",
   end: "center 0%",
-  markers: { startColor: "white", endColor: "white" },
+  
 });
 
 ScrollTrigger.create({
@@ -85,7 +85,7 @@ ScrollTrigger.create({
   toggleClass: "animetextfade",
   start: "center 80%",
   end: "center 0%",
-  markers: { startColor: "white", endColor: "white" },
+  
 });
 
 
@@ -100,7 +100,7 @@ ScrollTrigger.create({
 //   onEnterBack: () => console.log("enterBack"),
 //   onLeaveBack: () => console.log("leaveBack"),
 //   onToggle: (self) => console.log("active", self.isActive),
-//   markers: { startColor: "white", endColor: "white" },
+//   
 // });
 
 // si déter finir le code en bas
@@ -131,7 +131,7 @@ gsap.to("#counter", {
     scrub: true,
     start: "center 80%",
     end: "center 58%",
-    markers: { startColor: "white", endColor: "white" },
+    
   },
   onUpdate: function () {
     document.getElementById("counter").innerText = Math.floor(this.targets()[0].innerText);
@@ -150,7 +150,7 @@ gsap.to("#counter2", {
     scrub: true,
     start: "center 80%",
     end: "center 58%",
-    markers: { startColor: "white", endColor: "white" },
+    
   },
   onUpdate: function () {
     document.getElementById("counter2").innerText = Math.floor(this.targets()[0].innerText);
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
         start: "0% 80%",
         end: "center 58%",
         toggleActions: "play none none reset",
-        // markers: { startColor: "white", endColor: "white" },
+        // 
       },
     }
   );
@@ -195,7 +195,7 @@ function translateBobOnScroll() {
   //     scrub: true,
   //     start: "center 80%",
   //     end: "center 58%",
-  //     markers: { startColor: "white", endColor: "white" },
+  //     
   //   },
   // });
 
@@ -264,7 +264,7 @@ gsap.fromTo(
       start: "0% 100%",
       end: "center 58%",
       toggleActions: "play none none reset",
-      // markers: { startColor: "white", endColor: "white" },
+      // 
     },
   }
 );
@@ -287,7 +287,7 @@ gsap.fromTo(
       start: "0% 100%",
       end: "center 58%",
       toggleActions: "play none none reset",
-      // markers: { startColor: "white", endColor: "white" },
+      // 
     },
   }
 );
@@ -309,7 +309,7 @@ gsap.fromTo(
       start: "0% 100%",
       end: "center 58%",
       toggleActions: "play none none reset",
-      // markers: { startColor: "white", endColor: "white" },
+      // 
     },
   }
 );
@@ -326,7 +326,7 @@ gsap.to("#lastcounter", {
     start: "0% 100%",
     end: "center 58%",
     toggleActions: "play none none reset",
-    // markers: { startColor: "white", endColor: "white" },
+    // 
   },
   onUpdate: function () {
     document.getElementById("lastcounter").innerText = Math.floor(this.targets()[0].innerText);
